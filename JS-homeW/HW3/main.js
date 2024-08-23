@@ -24,11 +24,12 @@ while (b < 20) {
 
 // task 5
 let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+document.write(`<ul>`);
 for (const justItems of listOfItems) {
-    document.write(`<ul>
-        <li>${justItems}</li>
-    </ul>`);
+   document.write(`<li>${justItems}</li>`);
 }
+document.write(`</ul>`);
+
 
 // task 6
 let products = [
