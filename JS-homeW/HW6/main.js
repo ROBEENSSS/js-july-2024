@@ -36,7 +36,7 @@ console.log(stringToArray('Ревуть воли як ясла повні'));
 
 // task 6
 const arrNum = [10,8,-7,55,987,-1011,0,1050,0];
-const arrStr = arrNum.map(str => str + '');
+const arrStr = arrNum.map(str => str.toString());
 console.log(arrStr);
 
 // task 7
