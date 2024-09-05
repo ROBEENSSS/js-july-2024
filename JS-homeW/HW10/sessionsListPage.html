@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // task 5
+    const sessionList = JSON.parse(localStorage.getItem('sessionList'));
+    for (const sessionListElement of sessionList) {
+        const div = document.createElement('div');
+        div.innerText = sessionListElement.toString();
+        document.body.append(div);
+    }
+</script>
+
+</body>
+</html>
