@@ -64,4 +64,7 @@ if (userId) {
                 document.getElementById('userPosts').innerText = 'Де його пости??';
             });
     })
+} else {
+    console.error('User ID not found in URL');
+    document.getElementById('userDetails').innerText = 'No user ID provided.';
 }
