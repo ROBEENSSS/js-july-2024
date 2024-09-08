@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             const button = document.createElement('button');
             button.innerText = 'Details';
             button.addEventListener('click', () => {
-                window.location.href = `user-details/user-details.html`;
+                window.location.href = `user-details/user-details.html?id=${user.id}`;
             });
             userDiv.appendChild(button);
             containerUsers.appendChild(userDiv);
