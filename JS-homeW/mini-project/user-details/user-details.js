@@ -50,7 +50,9 @@ if (userId) {
 
                 posts.forEach(post => {
                     const li = document.createElement('li');
-                    li.innerText = post.title;
+                    li.innerHTML = `
+                        <p>${post.title}</p>
+                        <a href="../post-details/post-details.html?postId=${post.id}">Details</a>`;
                     ul.appendChild(li);
                 });
                 userPostsDiv.appendChild(ul);
@@ -66,5 +68,5 @@ if (userId) {
     })
 } else {
     console.error('User ID not found in URL');
-    document.getElementById('userDetails').innerText = 'No user ID provided.';
+    document.getElementById('userDetails').innerText = 'Перевір шлях до Айдішкі';
 }
