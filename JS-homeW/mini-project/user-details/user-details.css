@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #A19FA0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#postsBtn {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#userPosts ul{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#userPosts > ul > li > a {
+    text-decoration: none;
+    color: red;
+    margin: 0;
+    padding: 0;
+}
+
+#userPosts > ul > li > a:hover {
+    color: white;
+}

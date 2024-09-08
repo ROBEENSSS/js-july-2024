@@ -16,7 +16,7 @@ function objDetails(obj, container) {
                 li.innerText = `${key}:`;
                 objDetails(obj[key], li);
             } else {
-                li.innerText = `${key}: ${obj[key]}`;
+                li.innerHTML = `<strong>${key}: </strong>${obj[key]}`;
             }
             ul.appendChild(li);
         }
@@ -52,7 +52,7 @@ if (userId) {
                     const li = document.createElement('li');
                     li.innerHTML = `
                         <p>${post.title}</p>
-                        <a href="../post-details/post-details.html?postId=${post.id}">Details</a>`;
+                        <a href="../post-details/post-details.html?postId=${post.id}">Click for Details</a>`;
                     ul.appendChild(li);
                 });
                 userPostsDiv.appendChild(ul);
