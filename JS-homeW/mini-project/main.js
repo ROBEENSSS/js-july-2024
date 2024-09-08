@@ -8,9 +8,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
         }
         users.forEach(user => {
             const userDiv = document.createElement('div');
-            userDiv.innerText = `ID: ${user.id} Name: ${user.name}`;
+            userDiv.classList.add('user-card');
+            userDiv.innerHTML = `
+                <p>ID: ${user.id}</p>
+                <p>Name: ${user.name}</p>`;
 
             const button = document.createElement('button');
+            button.classList.add('user-btn');
             button.innerText = 'Details';
             button.addEventListener('click', () => {
                 window.location.href = `user-details/user-details.html?id=${user.id}`;
