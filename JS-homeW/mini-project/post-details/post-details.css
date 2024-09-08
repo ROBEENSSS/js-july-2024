@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: #A19FA0;
+    padding: 20px;
+}
+
+#postDetails {
+    background-color: #2c231e;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#postDetails ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+#postComments ul {
+    display: grid;
+    border-radius: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+    list-style: none;
+    background-color: #2c231e;
+}

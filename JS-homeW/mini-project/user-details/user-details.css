@@ -15,21 +15,54 @@ body {
     gap: 20px;
 }
 
+#userDetails {
+    padding-top: 20px;
+    width: 90%;
+}
+
+#userDetails ul {
+    background-color: #2c231e;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+}
+
 #postsBtn {
+    background-color: #A19FA0;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color: black;
     width: 90%;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.2s;
 }
 
-#userPosts ul{
+#postsBtn:hover {
+    transition: 0.2s;
+    background-color: black;
+    color: #A19FA0;
+    border: 1px solid white;
+}
+
+#userPosts {
+    width: 90%;
+}
+
+#userPosts ul {
+    background-color: #2c231e;
     display: grid;
+    border-radius: 5px;
     grid-template-columns: repeat(5, 1fr);
     padding: 20px;
     gap: 20px;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
 }
 
 #userPosts > ul > li > a {

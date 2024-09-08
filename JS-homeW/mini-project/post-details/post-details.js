@@ -35,7 +35,6 @@ function commentsRend (comments, container) {
                 <p><strong>Name:</strong> ${comment.name}</p>
                 <p><strong>Email:</strong> ${comment.email}</p>
                 <p><strong>Comment:</strong> ${comment.body}</p>
-                <hr>
         `;
             ul.appendChild(li);
     });

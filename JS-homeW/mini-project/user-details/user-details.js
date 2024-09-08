@@ -16,7 +16,7 @@ function objDetails(obj, container) {
                 li.innerText = `${key}:`;
                 objDetails(obj[key], li);
             } else {
-                li.innerHTML = `<strong>${key}: </strong>${obj[key]}`;
+                li.innerHTML = `<strong>${key}:</strong> ${obj[key]}`;
             }
             ul.appendChild(li);
         }
@@ -58,7 +58,7 @@ if (userId) {
                 userPostsDiv.appendChild(ul);
 
                 postsBtn.disabled = true;
-                postsBtn.innerText = 'Нє тикай, уже усьо загрузив))';
+                postsBtn.innerText = 'Нє тикай мені тут, я вже дізейбл поставив))';
             })
 
             .catch(error => {
