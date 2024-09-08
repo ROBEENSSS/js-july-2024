@@ -27,6 +27,20 @@ function objPostDetails(obj, container) {
     container.appendChild(ul);
 }
 
+function commentsRend (comments, container) {
+    const ul = document.createElement('ul');
+    comments.forEach(comment => {
+        const li = document.createElement('li');
+            li.innerHTML = `
+                <p><strong>Name:</strong> ${comment.name}</p>
+                <p><strong>Email:</strong> ${comment.email}</p>
+                <p><strong>Comment:</strong> ${comment.body}</p>
+                <hr>
+        `;
+            ul.appendChild(li);
+    });
+    container.appendChild(ul);
+}
 
 if (postId) {
     fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`)
@@ -42,3 +56,16 @@ if (postId) {
     const postDetailsDiv = document.getElementById('postDetails');
     postDetailsDiv.innerText = 'Десь загубився айді поста';
 }
+
+fetch(`https://jsonplaceholder.typicode.com/posts/${postId}/comments`)
+    .then(response => response.json())
+    .then(comments => {
+        const postComments = document.getElementById('postComments');
+        postComments.innerHTML = `<h2>Comments:</h2>`;
+        commentsRend(comments, postComments);
+    })
+    .catch(error => {
+        console.error('Error fetching post comments:', error);
+        const postCommentsDiv = document.getElementById('postComments');
+        postCommentsDiv.innerHTML = `<h2>404! А всьо, нету комментов, шукай тепер</h2><p>${error.message}</p>`;
+    });
